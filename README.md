@@ -1,12 +1,105 @@
-# React + Vite
+# Tranquilo Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the Tranquilo mental wellness application, built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (signup/login)
+- Chat interface with AI (Botpress integration)
+- Feedback form
+- Responsive UI with Tailwind CSS
+- Toast notifications
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- React Router
+- React Hot Toast
+
+## Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Configure environment variables:**
+   - Create a `.env` file in the root directory.
+   - Add:
+     ```
+     VITE_BACKEND_URL=http://localhost:5400
+     ```
+
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```sh
+   npm run build
+   ```
+
+## Folder Structure
+
+- `src/Components/` — React components
+- `src/Context/` — Context providers
+- `public/` — Static assets
+
+---
+
+# Tranquilo Backend
+
+This is the backend for the Tranquilo mental wellness application. It provides RESTful APIs for user authentication and feedback submission.
+
+## Features
+
+- User registration and login with hashed passwords
+- Feedback submission and storage
+- MongoDB database integration
+- CORS and JSON body parsing
+
+## Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- bcrypt for password hashing
+- dotenv for environment variables
+
+## Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Configure environment variables:**
+   - Create a `.env` file in the `Backend/` directory.
+   - Add:
+     ```
+     MONGODB_URI=your_mongodb_connection_string
+     PORT=5400
+     ```
+
+3. **Run the server:**
+   ```sh
+   npm start
+   ```
+
+4. **API Endpoints:**
+   - `POST /api/users/signup` — Register a new user
+   - `POST /api/users/login` — Login user
+   - `POST /api/feedback` — Submit feedback
+
+## Folder Structure
+
+- `Controllers/` — Route handlers
+- `Models/` — Mongoose models
+- `Routers/` — Express routers
+- `DB/` — Database connection
+
+---
