@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from "../assets/image.png";
 
 const Chat = () => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -10,7 +11,7 @@ return (
             <div className='flex  items-center w-full fixed top-4 left-8'>
                     <img
                     className='h-[100px] w-[100px]'
-                    src="./src/assets/image.png"
+                    src={logo}
                     alt="logo"
                     />
                     <h1 className='text-4xl font-extrabold bg-gradient-to-r from-[#1DCD9F] to-[#4BBFD4] text-transparent bg-clip-text'>Tranquilo</h1>
