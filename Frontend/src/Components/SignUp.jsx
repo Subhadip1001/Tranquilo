@@ -26,7 +26,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/users/signup`,
+        `${import.meta.env.VITE_BACKEND_URL}api/users/signup`,
         userData
       );
       console.log("User signed up successfully:", response.data);

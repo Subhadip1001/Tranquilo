@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
       const respone = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/users/login`,
+        `${import.meta.env.VITE_BACKEND_URL}api/users/login`,
         loginData
       );
       if(respone.status === 200) {
