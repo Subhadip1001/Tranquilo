@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useAuth } from "../Context/AuthProvider";
 
@@ -75,11 +75,17 @@ const Login = () => {
             <button className="h-[50px] w-[400px] bg-[#1DCD9F] rounded-lg text-white font-semibold hover:bg-[#077A7D] transition duration-300 cursor-pointer">
               Login
             </button>
-            <button className="h-[50px] w-[400px]  rounded-lg border-2 border-[#3D90D7] text-[#3D90D7] font-semibold hover:bg-[#3D90D7] hover:text-white transition duration-300 cursor-pointer">
-              Create New Account
-            </button>
           </div>
         </form>
+            <Link
+              to="/signup"
+              className="block text-center px-6 py-3 rounded-lg border-2 border-[#3D90D7] text-[#3D90D7] font-semibold hover:bg-[#3D90D7] hover:text-white transition duration-300 cursor-pointer mt-4"
+              style={{ textDecoration: "none" }}
+              role="button"
+              tabIndex={0}
+            >
+              Create New Account
+            </Link>
       </div>
     </div>
   );
