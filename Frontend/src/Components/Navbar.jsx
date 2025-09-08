@@ -2,6 +2,7 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { useAuth } from "../Context/AuthProvider";
+import logo from "../assets/image.png";
 import Logout from "./Logout";
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
     <div className="flex bg-white opacity-95 h-[70px] w-full justify-between items-center px-10 fixed top-0 left-0 right-0 z-20 shadow-lg shadow-[#c3e5eb]">
       <div className="flex items-center">
         <img
-          src="./src/assets/image.png"
+          src={logo}
           alt="Logo"
           className="h-12 w-12 mr-1"
         />
