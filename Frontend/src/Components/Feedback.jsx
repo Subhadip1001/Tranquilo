@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import logo from "../assets/image.png";
 
 const Feedback = () => {
   const [fullname, setFullname] = useState("");
@@ -20,7 +21,7 @@ const Feedback = () => {
   
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/feedback`,
+        `${import.meta.env.VITE_BACKEND_URL}api/feedback`,
         feedbackData
       );
   
@@ -40,7 +41,7 @@ const Feedback = () => {
       <div className="bg-green-50 h-screen flex flex-col items-center justify-center">
         <img
           className="h-[100px] w-[100px]"
-          src="./src/assets/image.png"
+          src={logo}
           alt="logo"
         />
         <h1 className="text-4xl font-extrabold bg-gradient-to-r from-[#1DCD9F] to-[#4BBFD4] text-transparent bg-clip-text">
