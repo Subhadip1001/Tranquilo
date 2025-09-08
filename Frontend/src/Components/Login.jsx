@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useAuth } from "../Context/AuthProvider";
+import logo from "../assets/image.png";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ const Login = () => {
     <div className="bg-green-50 h-screen w-full px-10 py-40 flex flex-col justify-center items-center gap-6">
       <img
         className="h-[100px] w-[100px]"
-        src="./src/assets/image.png"
+        src={logo}
         alt="logo"
       />
       <h1 className="text-4xl font-extrabold bg-gradient-to-r from-[#1DCD9F] to-[#4BBFD4] text-transparent bg-clip-text">
